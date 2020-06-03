@@ -15,6 +15,12 @@ namespace DAO
 
         public DbSet<Artist> Artist { get; set; }
         public DbSet<Genre> Genre { get; set; }
+
+        public IList<Genre> GetGenres()
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<Music> Music { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<OrderLine> OrderLine { get; set; }
