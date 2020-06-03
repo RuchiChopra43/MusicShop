@@ -1,0 +1,12 @@
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\bin\Debug\netcoreapp3.1\DAO.deps.json
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\bin\Debug\netcoreapp3.1\DAO.dll
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\bin\Debug\netcoreapp3.1\DAO.pdb
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.csprojAssemblyReference.cache
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.AssemblyInfoInputs.cache
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.AssemblyInfo.cs
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.dll
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.pdb
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\bin\Debug\netcoreapp3.1\DAO.runtimeconfig.json
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\bin\Debug\netcoreapp3.1\DAO.runtimeconfig.dev.json
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.csproj.CoreCompileInputs.cache
+C:\Users\Nikhil\Desktop\C#\MusicShop\DAO\obj\Debug\netcoreapp3.1\DAO.genruntimeconfig.cache

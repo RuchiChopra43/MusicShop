@@ -1425,6 +1425,40 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "DAO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.4",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4"
+        },
+        "compile": {
+          "bin/placeholder/DAO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAO.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "DAO": "1.0.0",
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.4",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
       }
     }
   },
@@ -5353,15 +5387,27 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "DAO/1.0.0": {
+      "type": "project",
+      "path": "../DAO/DAO.csproj",
+      "msbuildProject": "../DAO/DAO.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DAO >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.4",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.4",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
-      "Microsoft.EntityFrameworkCore.Tools >= 3.1.4"
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.4",
+      "Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5371,11 +5417,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nikhil\\source\\repos\\MusicShop\\MusicShop\\MusicShop.csproj",
+      "projectUniqueName": "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\MusicShop\\MusicShop.csproj",
       "projectName": "MusicShop",
-      "projectPath": "C:\\Users\\Nikhil\\source\\repos\\MusicShop\\MusicShop\\MusicShop.csproj",
+      "projectPath": "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\MusicShop\\MusicShop.csproj",
       "packagesPath": "C:\\Users\\Nikhil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nikhil\\source\\repos\\MusicShop\\MusicShop\\obj\\",
+      "outputPath": "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\MusicShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5393,7 +5439,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\DAO\\DAO.csproj"
+            },
+            "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\Nikhil\\Desktop\\C#\\MusicShop\\Services\\Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
