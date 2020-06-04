@@ -1,44 +1,88 @@
 ﻿using DAO;
+using Microsoft.EntityFrameworkCore;
 using Services.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace Services
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        protected MusicShopDbContext context;
-        public RepositoryBase(MusicShopDbContext MusicShopDbContext)
+        protected readonly DbContext Context;
+        internal DbSet<T> dbSet;
+
+        public RepositoryBase(DbContext context)
         {
-            context = MusicShopDbContext;
+            Context = context;
+            this.dbSet = context.Set<T>();
         }
+
+        public void Add(T entity)
+        {
+            dbSet.Add(entity);
+        }
+
         public T Get(int id)
         {
-            return context.Set<T>().Find(id);
-        }
-        public IList<T> ListAll()
-        {
-            return context.Set<T>().ToList();
-        }
-        public int Update(T entity)
-        {
-            context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            return context.SaveChanges();
+            return dbSet.Find(id);
         }
 
-        public int Delete(T entity)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
         {
-            context.Set<T>().Remove(entity);
-            return context.SaveChanges();
+            IQueryable<T> query = dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            //include properties will be comma seperated
+            if (includeProperties != null)
+            {
+                foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+            return query.ToList();
         }
 
-        public T Add(T entity)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
         {
-            context.Set<T>().Add(entity);
-            context.SaveChanges();
-            return entity;
+            IQueryable<T> query = dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            //include properties will be comma seperated
+            if (includeProperties != null)
+            {
+                foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
+            return query.FirstOrDefault();
+        }
+
+        public void Remove(int id)
+        {
+            T entityToRemove = dbSet.Find(id);
+            Remove(entityToRemove);
+        }
+
+        public void Remove(T entity)
+        {
+            dbSet.Remove(entity);
         }
     }
 }

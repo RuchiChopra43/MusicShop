@@ -9,7 +9,12 @@ namespace Services.Repository
 {
    public class GenreRepository : RepositoryBase<Genre>, IGenreRepository
     {
-        public GenreRepository(MusicShopDbContext context) : base(context) { }
-        
+        private readonly MusicShopDbContext _db;
+        public GenreRepository(MusicShopDbContext db) : base(db)
+
+        {
+            _db = db;
+        }
+
     }
 }

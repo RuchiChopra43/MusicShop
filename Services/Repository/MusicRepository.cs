@@ -9,6 +9,11 @@ namespace Services.Repository
 {
     public class MusicRepository : RepositoryBase<Music>, IMusicRepository
     {
-        public MusicRepository(MusicShopDbContext context) : base(context) { }
+        private readonly MusicShopDbContext _db;
+        public MusicRepository(MusicShopDbContext db) : base(db)
+
+        {
+            _db = db;
+        }
     }
 }

@@ -9,7 +9,12 @@ namespace Services.Repository
 {
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public UserRepository(MusicShopDbContext context) : base(context) { }
+        private readonly MusicShopDbContext _db;
+        public UserRepository(MusicShopDbContext db) : base(db)
+
+        {
+            _db = db;
+        }
 
     }
 }
