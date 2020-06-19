@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DAO;
+using DAO.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Services;
 
 namespace MusicShop.Controllers
 {
     public class GenreController : Controller
     {
-        private readonly MusicShopDbContext _context;
-
-        public GenreController(MusicShopDbContext context)
+        
+        private IMusicShopService service;
+        public GenreController(IMusicShopService _service)
         {
-            _context = context;
+            service = _service;
         }
-        // GET: GenreController
-        public IActionResult GetGenre()
+        public IActionResult GetGenres()
         {
-            return View(_context.Genre.ToList());
-
+            List<Genre> _genres = service.Genre.ListAll().ToList();
+            return View("GetGenres", _genres);
         }
         // GET: GenreController
         public ActionResult Index()

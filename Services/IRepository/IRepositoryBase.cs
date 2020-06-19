@@ -9,21 +9,9 @@ namespace Services.IRepository
     public interface IRepositoryBase<T>
     {
         T Get(int id);
-
-        IEnumerable<T> GetAll(
-            Expression<Func<T, bool>> filter = null,
-            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-            string includeProperties = null
-            );
-
-        T GetFirstOrDefault(
-            Expression<Func<T, bool>> filter = null,
-            string includeProperties = null
-            );
-
-        void Add(T entity);
-
-        void Remove(int id);
-        void Remove(T entity);
+        IList<T> ListAll();
+        int Update(T entity);
+        int Delete(T entity);
+        T Add(T entity);
     }
 }

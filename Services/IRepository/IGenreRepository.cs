@@ -7,7 +7,7 @@ namespace Services.IRepository
 {
     public interface IGenreRepository: IRepositoryBase<Genre>
     {
-        
+              
     }
 
 }

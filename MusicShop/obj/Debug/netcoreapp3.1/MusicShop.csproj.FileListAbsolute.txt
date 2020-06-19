@@ -250,4 +250,4 @@ C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\bin\Debug\netcoreapp3.1\zh-Hant\M
 C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\MusicShop.csproj.CoreCompileInputs.cache
 C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\MusicShop.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\MusicShop.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\Razor\Views\Genre\GetGenre.cshtml.g.cs
+C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\Razor\Views\Genre\GetGenres.cshtml.g.cs
