@@ -251,3 +251,5 @@ C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\MusicShop
 C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\MusicShop.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\MusicShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\Razor\Views\Genre\GetGenres.cshtml.g.cs
+C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\Razor\Views\Genre\GetGenre.cshtml.g.cs
+C:\Users\Nikhil\Desktop\C#\MusicShop\MusicShop\obj\Debug\netcoreapp3.1\Razor\Views\Genre\GetMusics.cshtml.g.cs

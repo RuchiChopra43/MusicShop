@@ -6,11 +6,6 @@ namespace DAO.Models
 {
     public partial class Music
     {
-        public Music()
-        {
-            OrderLine = new HashSet<OrderLine>();
-        }
-
         public int Id { get; set; }
         public string Title { get; set; }
         public int NumTrack { get; set; }

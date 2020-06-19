@@ -6,11 +6,7 @@ namespace DAO.Models
 {
     public partial class Order
     {
-        public Order()
-        {
-            OrderLine = new HashSet<OrderLine>();
-        }
-
+        
         public int Id { get; set; }
         public string DelAddress { get; set; }
         public DateTime DateCreated { get; set; }

@@ -6,13 +6,7 @@ namespace DAO.Models
 {
     public partial class User
     {
-        public User()
-        {
-            Artist = new HashSet<Artist>();
-            Genre = new HashSet<Genre>();
-            Music = new HashSet<Music>();
-            Order = new HashSet<Order>();
-        }
+       
 
         public int Id { get; set; }
         public string Name { get; set; }

@@ -1,60 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using DAO;
-using DAO.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Services;
 
 namespace MusicShop.Controllers
 {
-    public class GenreController : Controller
+    public class MusicController : Controller
     {
-        
-        private IMusicShopService service;
-        public GenreController(IMusicShopService _service)
-        {
-            service = _service;
-        }
-        public IActionResult GetGenres()
-        {
-            List<Genre> _genres = service.Genre.ListAll().ToList();
-            return View("GetGenres", _genres);
-        }
-
-        public IActionResult GetGenre(int id)
-        {
-            Genre genre = service.Genre.Get(id);
-            return View(genre);
-        }
-
-        public IActionResult GetMusics(int id )
-        {
-            IList<Music> _Musics = service.Genre.Musicsingenre(id);
-            return View("GetMusics", _Musics);            
-        }
-        // GET: GenreController
+        // GET: MusicController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: GenreController/Details/5
+        // GET: MusicController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: GenreController/Create
+        // GET: MusicController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: GenreController/Create
+        // POST: MusicController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -69,13 +42,13 @@ namespace MusicShop.Controllers
             }
         }
 
-        // GET: GenreController/Edit/5
+        // GET: MusicController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: GenreController/Edit/5
+        // POST: MusicController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -90,13 +63,13 @@ namespace MusicShop.Controllers
             }
         }
 
-        // GET: GenreController/Delete/5
+        // GET: MusicController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: GenreController/Delete/5
+        // POST: MusicController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
